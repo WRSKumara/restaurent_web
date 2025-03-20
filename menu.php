@@ -100,9 +100,9 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src="images/rice_curry.jpg" class="card-img-top" alt="Rice & Curry">
+                    <img src="images/cart10.jpg" class="card-img-top" alt="Rice & Curry">
                     <div class="card-body">
-                        <h5 class="card-title">Rice & Curry</h5>
+                        <h5 class="card-title">Vegetable Rice & Curry</h5>
                         <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
                     </div>
                 </div>
@@ -110,9 +110,9 @@
 
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src="images/rice_curry.jpg" class="card-img-top" alt="Rice & Curry">
+                    <img src="images/cart11.jpg" class="card-img-top" alt="Rice & Curry">
                     <div class="card-body">
-                        <h5 class="card-title">Rice & Curry</h5>
+                        <h5 class="card-title">Chicken Rice & Curry</h5>
                         <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
                     </div>
                 </div>
@@ -120,9 +120,9 @@
 
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src="images/rice_curry.jpg" class="card-img-top" alt="Rice & Curry">
+                    <img src="images/cart12.png" class="card-img-top" alt="Rice & Curry">
                     <div class="card-body">
-                        <h5 class="card-title">Rice & Curry</h5>
+                        <h5 class="card-title">Egg Rice & Curry</h5>
                         <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
                     </div>
                 </div>
@@ -130,9 +130,9 @@
 
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src="images/rice_curry.jpg" class="card-img-top" alt="Rice & Curry">
+                    <img src="images/cart13.jpg" class="card-img-top" alt="Rice & Curry">
                     <div class="card-body">
-                        <h5 class="card-title">Rice & Curry</h5>
+                        <h5 class="card-title">Pork Rice & Curry</h5>
                         <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
                     </div>
                 </div>
@@ -144,9 +144,9 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src="images/kottu.jpg" class="card-img-top" alt="Kottu">
+                    <img src="images/cart14.jpg" class="card-img-top" alt="Kottu">
                     <div class="card-body">
-                        <h5 class="card-title">Kottu</h5>
+                        <h5 class="card-title">Chiken Kottu</h5>
                         <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
                     </div>
                 </div>
@@ -154,9 +154,9 @@
 
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src="images/kottu.jpg" class="card-img-top" alt="Kottu">
+                    <img src="images/cart15.jpg" class="card-img-top" alt="Kottu">
                     <div class="card-body">
-                        <h5 class="card-title">Kottu</h5>
+                        <h5 class="card-title">Vegetable Kottu</h5>
                         <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
                     </div>
                 </div>
@@ -164,9 +164,9 @@
 
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src="images/kottu.jpg" class="card-img-top" alt="Kottu">
+                    <img src="images/cart16.jpg" class="card-img-top" alt="Kottu">
                     <div class="card-body">
-                        <h5 class="card-title">Kottu</h5>
+                        <h5 class="card-title">Egg Kottu</h5>
                         <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
                     </div>
                 </div>
@@ -174,9 +174,9 @@
 
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src="images/kottu.jpg" class="card-img-top" alt="Kottu">
+                    <img src="images/cart17.jpg" class="card-img-top" alt="Kottu">
                     <div class="card-body">
-                        <h5 class="card-title">Kottu</h5>
+                        <h5 class="card-title">Cheese Kottu</h5>
                         <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
                     </div>
                 </div>

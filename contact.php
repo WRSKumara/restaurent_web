@@ -20,7 +20,7 @@
                 <p class="text-center">Address: 123 Main St, City, Country</p>
             </div>
             <div class="col-md-6">
-                <img src="images/restaurant.jpg" class="img-fluid rounded" alt="Restaurant Image">
+                <img src="images/image2.jpg" class="img-fluid rounded" alt="Restaurant Image">
             </div>
         </div>
         <div class="row mt-5">
