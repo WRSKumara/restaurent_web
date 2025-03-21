@@ -21,6 +21,17 @@
                 <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
+                <input type="text" name="item_name" class="form-control" placeholder="Item Name" required>
+            </div>
+            <div class="form-group">
+                <select name="size" class="form-control" required>
+                    <option value="" disabled selected>Select Size</option>
+                    <option value="Large">Large</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Small">Small</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <textarea name="order_details" class="form-control" placeholder="Your Order" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit Order</button>

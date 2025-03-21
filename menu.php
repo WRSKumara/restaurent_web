@@ -23,7 +23,11 @@
                     <img src="images/cart2.jpg" class="card-img-top" alt="Chicken Fried Rice">
                     <div class="card-body">
                         <h5 class="card-title">Chicken Fried Rice</h5>
-                        <p class="card-text">Large: $10<br>Medium: $8<br>Small: $6</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $10</button>
+                            <button type="button" class="btn btn-primary">Medium: $8</button>
+                            <button type="button" class="btn btn-primary">Small: $6</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,7 +36,11 @@
                     <img src="images/cart3.jpg" class="card-img-top" alt="Egg Fried Rice">
                     <div class="card-body">
                         <h5 class="card-title">Egg Fried Rice</h5>
-                        <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $9</button>
+                            <button type="button" class="btn btn-primary">Medium: $7</button>
+                            <button type="button" class="btn btn-primary">Small: $5</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,7 +49,11 @@
                     <img src="images/cart5.jpg" class="card-img-top" alt="Seafood Fried Rice">
                     <div class="card-body">
                         <h5 class="card-title">Seafood Fried Rice</h5>
-                        <p class="card-text">Large: $12<br>Medium: $10<br>Small: $8</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $12</button>
+                            <button type="button" class="btn btn-primary">Medium: $10</button>
+                            <button type="button" class="btn btn-primary">Small: $8</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -50,7 +62,11 @@
                     <img src="images/cart6.jpg" class="card-img-top" alt="Mix Fried Rice">
                     <div class="card-body">
                         <h5 class="card-title">Mix Fried Rice</h5>
-                        <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $11</button>
+                            <button type="button" class="btn btn-primary">Medium: $9</button>
+                            <button type="button" class="btn btn-primary">Small: $7</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,7 +79,11 @@
                     <img src="images/cart1.jpg" class="card-img-top" alt="Chicken Biryani">
                     <div class="card-body">
                         <h5 class="card-title">Chicken Biryani</h5>
-                        <p class="card-text">Large: $12<br>Medium: $10<br>Small: $8</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $12</button>
+                            <button type="button" class="btn btn-primary">Medium: $10</button>
+                            <button type="button" class="btn btn-primary">Small: $8</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,7 +92,11 @@
                     <img src="images/cart7.jpg" class="card-img-top" alt="Beef Biryani">
                     <div class="card-body">
                         <h5 class="card-title">Beef Biryani</h5>
-                        <p class="card-text">Large: $13<br>Medium: $11<br>Small: $9</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $13</button>
+                            <button type="button" class="btn btn-primary">Medium: $11</button>
+                            <button type="button" class="btn btn-primary">Small: $9</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -81,7 +105,11 @@
                     <img src="images/cart8.jpg" class="card-img-top" alt="Prawn Biryani">
                     <div class="card-body">
                         <h5 class="card-title">Prawn Biryani</h5>
-                        <p class="card-text">Large: $14<br>Medium: $12<br>Small: $10</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $14</button>
+                            <button type="button" class="btn btn-primary">Medium: $12</button>
+                            <button type="button" class="btn btn-primary">Small: $10</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -90,7 +118,11 @@
                     <img src="images/cart9.jpg" class="card-img-top" alt="Vegetable Biryani">
                     <div class="card-body">
                         <h5 class="card-title">Vegetable Biryani</h5>
-                        <p class="card-text">Large: $10<br>Medium: $8<br>Small: $6</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $10</button>
+                            <button type="button" class="btn btn-primary">Medium: $8</button>
+                            <button type="button" class="btn btn-primary">Small: $6</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -103,7 +135,11 @@
                     <img src="images/cart10.jpg" class="card-img-top" alt="Rice & Curry">
                     <div class="card-body">
                         <h5 class="card-title">Vegetable Rice & Curry</h5>
-                        <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $9</button>
+                            <button type="button" class="btn btn-primary">Medium: $7</button>
+                            <button type="button" class="btn btn-primary">Small: $5</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,7 +149,11 @@
                     <img src="images/cart11.jpg" class="card-img-top" alt="Rice & Curry">
                     <div class="card-body">
                         <h5 class="card-title">Chicken Rice & Curry</h5>
-                        <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $9</button>
+                            <button type="button" class="btn btn-primary">Medium: $7</button>
+                            <button type="button" class="btn btn-primary">Small: $5</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -123,7 +163,11 @@
                     <img src="images/cart12.png" class="card-img-top" alt="Rice & Curry">
                     <div class="card-body">
                         <h5 class="card-title">Egg Rice & Curry</h5>
-                        <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $9</button>
+                            <button type="button" class="btn btn-primary">Medium: $7</button>
+                            <button type="button" class="btn btn-primary">Small: $5</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,7 +177,11 @@
                     <img src="images/cart13.jpg" class="card-img-top" alt="Rice & Curry">
                     <div class="card-body">
                         <h5 class="card-title">Pork Rice & Curry</h5>
-                        <p class="card-text">Large: $9<br>Medium: $7<br>Small: $5</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $9</button>
+                            <button type="button" class="btn btn-primary">Medium: $7</button>
+                            <button type="button" class="btn btn-primary">Small: $5</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,8 +194,12 @@
                 <div class="card mb-4">
                     <img src="images/cart14.jpg" class="card-img-top" alt="Kottu">
                     <div class="card-body">
-                        <h5 class="card-title">Chiken Kottu</h5>
-                        <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
+                        <h5 class="card-title">Chicken Kottu</h5>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $11</button>
+                            <button type="button" class="btn btn-primary">Medium: $9</button>
+                            <button type="button" class="btn btn-primary">Small: $7</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,7 +209,11 @@
                     <img src="images/cart15.jpg" class="card-img-top" alt="Kottu">
                     <div class="card-body">
                         <h5 class="card-title">Vegetable Kottu</h5>
-                        <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $11</button>
+                            <button type="button" class="btn btn-primary">Medium: $9</button>
+                            <button type="button" class="btn btn-primary">Small: $7</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,7 +223,11 @@
                     <img src="images/cart16.jpg" class="card-img-top" alt="Kottu">
                     <div class="card-body">
                         <h5 class="card-title">Egg Kottu</h5>
-                        <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $11</button>
+                            <button type="button" class="btn btn-primary">Medium: $9</button>
+                            <button type="button" class="btn btn-primary">Small: $7</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,12 +237,14 @@
                     <img src="images/cart17.jpg" class="card-img-top" alt="Kottu">
                     <div class="card-body">
                         <h5 class="card-title">Cheese Kottu</h5>
-                        <p class="card-text">Large: $11<br>Medium: $9<br>Small: $7</p>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary">Large: $11</button>
+                            <button type="button" class="btn btn-primary">Medium: $9</button>
+                            <button type="button" class="btn btn-primary">Small: $7</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            
             <!-- Add more subcategories for Kottu if needed -->
         </div>
     </section>

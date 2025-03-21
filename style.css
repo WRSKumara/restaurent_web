@@ -103,14 +103,14 @@ header {
 
 .btn-primary {
     background-color: #add8e6; /* Light blue background color */
-    color: #0000ff; /* Blue foreground color */
     border-color: #add8e6; /* Light blue border color */
+    color: #000000; /* Black text color */
 }
 
 .btn-primary:hover {
-    background-color: #87ceeb; /* Slightly darker light blue background color */
-    color: #0000cd; /* Darker blue foreground color */
-    border-color: #87ceeb; /* Slightly darker light blue border color */
+    background-color: #87ceeb; /* Slightly darker light blue background for hover */
+    border-color: #87ceeb; /* Slightly darker light blue border for hover */
+    color: #000000; /* Black text color on hover */
 }
 
 footer {
