@@ -21,14 +21,14 @@
                 <input type="text" name="phone" class="form-control" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
-                <input type="text" name="item_name" class="form-control" placeholder="Item Name" required>
+                <input type="text" name="item_name" class="form-control" placeholder="Item Name" value="<?php echo isset($_GET['item_name']) ? htmlspecialchars($_GET['item_name']) : ''; ?>" required>
             </div>
             <div class="form-group">
                 <select name="size" class="form-control" required>
-                    <option value="" disabled selected>Select Size</option>
-                    <option value="Large">Large</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Small">Small</option>
+                    <option value="" disabled <?php echo !isset($_GET['size']) ? 'selected' : ''; ?>>Select Size</option>
+                    <option value="Large" <?php echo (isset($_GET['size']) && $_GET['size'] == 'Large') ? 'selected' : ''; ?>>Large</option>
+                    <option value="Medium" <?php echo (isset($_GET['size']) && $_GET['size'] == 'Medium') ? 'selected' : ''; ?>>Medium</option>
+                    <option value="Small" <?php echo (isset($_GET['size']) && $_GET['size'] == 'Small') ? 'selected' : ''; ?>>Small</option>
                 </select>
             </div>
             <div class="form-group">

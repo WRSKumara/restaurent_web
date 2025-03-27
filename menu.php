@@ -1,258 +1,199 @@
-<!-- filepath: c:\xampp\htdocs\restaurent_web\menu.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Delicious Flavors - Our Menu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .menu-section {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+        .card-body {
+            text-align: center;
+            padding: 20px;
+        }
+        .btn-order {
+            background-color: #ff6b6b;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-order:hover {
+            background-color: #ff4757;
+            transform: translateY(-3px);
+        }
+        .section-title {
+            color: #2f3542;
+            font-weight: bold;
+            margin-bottom: 30px;
+            position: relative;
+            text-align: center;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: #ff6b6b;
+        }
+    </style>
 </head>
 <body>
     <?php include 'header.php'; ?>
 
-    <section class="container mt-5">
-        <h1 class="text-center">Our Menu</h1>
-        <h2 class="text-center">Our Special Dishes</h2>
+    <div class="container mt-5">
+        <h1 class="text-center mb-5" style="color: #2f3542; font-weight: bold;">Our Delicious Menu</h1>
+        
+        <!-- Fried Rice Section -->
+        <div class="menu-section">
+            <h2 class="section-title">Fried Rice Specials</h2>
+            <div class="row">
+                <?php 
+                $friedRices = [
+                    ['name' => 'Chicken Fried Rice', 'image' => 'cart1.jpg', 'description' => 'Delicious chicken fried rice with a blend of spices'],
+                    ['name' => 'Egg Fried Rice', 'image' => 'cart2.jpg', 'description' => 'Tasty egg fried rice with fresh vegetables'],
+                    ['name' => 'Seafood Fried Rice', 'image' => 'cart3.jpg', 'description' => 'A delightful mix of seafood and fried rice'],
+                    ['name' => 'Mix Fried Rice', 'image' => 'cart4.jpg', 'description' => 'A perfect combination of flavors in every bite']
+                ];
 
-        <h3 class="mt-5">Fried Rice</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart2.jpg" class="card-img-top" alt="Chicken Fried Rice">
-                    <div class="card-body">
-                        <h5 class="card-title">Chicken Fried Rice</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $10</button>
-                            <button type="button" class="btn btn-primary">Medium: $8</button>
-                            <button type="button" class="btn btn-primary">Small: $6</button>
+                foreach ($friedRices as $rice): ?>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="images/<?= $rice['image'] ?>" class="card-img-top" alt="<?= $rice['name'] ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $rice['name'] ?></h5>
+                            <p class="card-text text-muted"><?= $rice['description'] ?></p>
+                            <a href="view_item.php?item=<?= urlencode($rice['name']) ?>" class="btn btn-order btn-primary w-100">
+                                <i class="fas fa-shopping-cart me-2"></i>Order Now
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart3.jpg" class="card-img-top" alt="Egg Fried Rice">
-                    <div class="card-body">
-                        <h5 class="card-title">Egg Fried Rice</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $9</button>
-                            <button type="button" class="btn btn-primary">Medium: $7</button>
-                            <button type="button" class="btn btn-primary">Small: $5</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart5.jpg" class="card-img-top" alt="Seafood Fried Rice">
-                    <div class="card-body">
-                        <h5 class="card-title">Seafood Fried Rice</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $12</button>
-                            <button type="button" class="btn btn-primary">Medium: $10</button>
-                            <button type="button" class="btn btn-primary">Small: $8</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart6.jpg" class="card-img-top" alt="Mix Fried Rice">
-                    <div class="card-body">
-                        <h5 class="card-title">Mix Fried Rice</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $11</button>
-                            <button type="button" class="btn btn-primary">Medium: $9</button>
-                            <button type="button" class="btn btn-primary">Small: $7</button>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
 
-        <h3 class="mt-5">Biryani</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart1.jpg" class="card-img-top" alt="Chicken Biryani">
-                    <div class="card-body">
-                        <h5 class="card-title">Chicken Biryani</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $12</button>
-                            <button type="button" class="btn btn-primary">Medium: $10</button>
-                            <button type="button" class="btn btn-primary">Small: $8</button>
+        <!-- Biryani Section -->
+        <div class="menu-section">
+            <h2 class="section-title">Biryani Delights</h2>
+            <div class="row">
+                <?php 
+                $biryanis = [
+                    ['name' => 'Chicken Biryani', 'image' => 'cart5.jpg', 'description' => 'Aromatic chicken biryani with rich spices'],
+                    ['name' => 'Beef Biryani', 'image' => 'cart6.jpg', 'description' => 'Flavorful beef biryani cooked to perfection'],
+                    ['name' => 'Prawn Biryani', 'image' => 'cart7.jpg', 'description' => 'Delicious prawn biryani with a hint of saffron'],
+                    ['name' => 'Vegetable Biryani', 'image' => 'cart8.jpg', 'description' => 'Healthy and flavorful vegetable biryani']
+                ];
+
+                foreach ($biryanis as $biryani): ?>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="images/<?= $biryani['image'] ?>" class="card-img-top" alt="<?= $biryani['name'] ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $biryani['name'] ?></h5>
+                            <p class="card-text text-muted"><?= $biryani['description'] ?></p>
+                            <a href="view_item.php?item=<?= urlencode($biryani['name']) ?>" class="btn btn-order btn-primary w-100">
+                                <i class="fas fa-shopping-cart me-2"></i>Order Now
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart7.jpg" class="card-img-top" alt="Beef Biryani">
-                    <div class="card-body">
-                        <h5 class="card-title">Beef Biryani</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $13</button>
-                            <button type="button" class="btn btn-primary">Medium: $11</button>
-                            <button type="button" class="btn btn-primary">Small: $9</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart8.jpg" class="card-img-top" alt="Prawn Biryani">
-                    <div class="card-body">
-                        <h5 class="card-title">Prawn Biryani</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $14</button>
-                            <button type="button" class="btn btn-primary">Medium: $12</button>
-                            <button type="button" class="btn btn-primary">Small: $10</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart9.jpg" class="card-img-top" alt="Vegetable Biryani">
-                    <div class="card-body">
-                        <h5 class="card-title">Vegetable Biryani</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $10</button>
-                            <button type="button" class="btn btn-primary">Medium: $8</button>
-                            <button type="button" class="btn btn-primary">Small: $6</button>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
 
-        <h3 class="mt-5">Rice & Curry</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart10.jpg" class="card-img-top" alt="Rice & Curry">
-                    <div class="card-body">
-                        <h5 class="card-title">Vegetable Rice & Curry</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $9</button>
-                            <button type="button" class="btn btn-primary">Medium: $7</button>
-                            <button type="button" class="btn btn-primary">Small: $5</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Rice & Curry Section -->
+        <div class="menu-section">
+            <h2 class="section-title">Rice & Curry Classics</h2>
+            <div class="row">
+                <?php 
+                $riceAndCurries = [
+                    ['name' => 'Vegetable Rice & Curry', 'image' => 'cart1.jpg', 'description' => 'A healthy and flavorful vegetable curry served with rice'],
+                    ['name' => 'Chicken Rice & Curry', 'image' => 'cart2.jpg', 'description' => 'Delicious chicken curry served with steamed rice'],
+                    ['name' => 'Egg Rice & Curry', 'image' => 'cart3.jpg', 'description' => 'A simple yet tasty egg curry served with rice'],
+                    ['name' => 'Pork Rice & Curry', 'image' => 'cart4.jpg', 'description' => 'Rich and flavorful pork curry served with rice']
+                ];
 
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart11.jpg" class="card-img-top" alt="Rice & Curry">
-                    <div class="card-body">
-                        <h5 class="card-title">Chicken Rice & Curry</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $9</button>
-                            <button type="button" class="btn btn-primary">Medium: $7</button>
-                            <button type="button" class="btn btn-primary">Small: $5</button>
+                foreach ($riceAndCurries as $dish): ?>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="images/<?= $dish['image'] ?>" class="card-img-top" alt="<?= $dish['name'] ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $dish['name'] ?></h5>
+                            <p class="card-text text-muted"><?= $dish['description'] ?></p>
+                            <a href="view_item.php?item=<?= urlencode($dish['name']) ?>" class="btn btn-order btn-primary w-100">
+                                <i class="fas fa-shopping-cart me-2"></i>Order Now
+                            </a>
                         </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </div>
-
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart12.png" class="card-img-top" alt="Rice & Curry">
-                    <div class="card-body">
-                        <h5 class="card-title">Egg Rice & Curry</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $9</button>
-                            <button type="button" class="btn btn-primary">Medium: $7</button>
-                            <button type="button" class="btn btn-primary">Small: $5</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart13.jpg" class="card-img-top" alt="Rice & Curry">
-                    <div class="card-body">
-                        <h5 class="card-title">Pork Rice & Curry</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $9</button>
-                            <button type="button" class="btn btn-primary">Medium: $7</button>
-                            <button type="button" class="btn btn-primary">Small: $5</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more subcategories for Rice & Curry if needed -->
         </div>
 
-        <h3 class="mt-5">Kottu</h3>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart14.jpg" class="card-img-top" alt="Kottu">
-                    <div class="card-body">
-                        <h5 class="card-title">Chicken Kottu</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $11</button>
-                            <button type="button" class="btn btn-primary">Medium: $9</button>
-                            <button type="button" class="btn btn-primary">Small: $7</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Kottu Section -->
+        <div class="menu-section">
+            <h2 class="section-title">Kottu Varieties</h2>
+            <div class="row">
+                <?php 
+                $kottus = [
+                    ['name' => 'Chicken Kottu', 'image' => 'cart5.jpg', 'description' => 'A popular Sri Lankan dish made with shredded roti and chicken'],
+                    ['name' => 'Vegetable Kottu', 'image' => 'cart6.jpg', 'description' => 'A vegetarian version of the classic kottu dish'],
+                    ['name' => 'Egg Kottu', 'image' => 'cart7.jpg', 'description' => 'A delicious kottu dish made with eggs and spices'],
+                    ['name' => 'Cheese Kottu', 'image' => 'cart8.jpg', 'description' => 'A cheesy twist on the classic kottu dish']
+                ];
 
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart15.jpg" class="card-img-top" alt="Kottu">
-                    <div class="card-body">
-                        <h5 class="card-title">Vegetable Kottu</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $11</button>
-                            <button type="button" class="btn btn-primary">Medium: $9</button>
-                            <button type="button" class="btn btn-primary">Small: $7</button>
+                foreach ($kottus as $kottu): ?>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="images/<?= $kottu['image'] ?>" class="card-img-top" alt="<?= $kottu['name'] ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?= $kottu['name'] ?></h5>
+                            <p class="card-text text-muted"><?= $kottu['description'] ?></p>
+                            <!-- filepath: c:\xampp\htdocs\restaurent_web\menu.php -->
+                                <a href="view_item.php?item=<?= urlencode($kottu['name']) ?>&image=<?= urlencode($kottu['image']) ?>&description=<?= urlencode($kottu['description']) ?>" class="btn btn-order btn-primary w-100">
+                                <i class="fas fa-shopping-cart me-2"></i>Order Now
+                                </a>
                         </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </div>
-
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart16.jpg" class="card-img-top" alt="Kottu">
-                    <div class="card-body">
-                        <h5 class="card-title">Egg Kottu</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $11</button>
-                            <button type="button" class="btn btn-primary">Medium: $9</button>
-                            <button type="button" class="btn btn-primary">Small: $7</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card mb-4">
-                    <img src="images/cart17.jpg" class="card-img-top" alt="Kottu">
-                    <div class="card-body">
-                        <h5 class="card-title">Cheese Kottu</h5>
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary">Large: $11</button>
-                            <button type="button" class="btn btn-primary">Medium: $9</button>
-                            <button type="button" class="btn btn-primary">Small: $7</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more subcategories for Kottu if needed -->
         </div>
-    </section>
+    </div>
 
     <?php include 'footer.php'; ?>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
