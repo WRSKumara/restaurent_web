@@ -1,4 +1,40 @@
 <!-- filepath: c:\xampp\htdocs\restaurent_web\cart.php -->
+<?php
+session_start();
+
+// Retrieve the form data
+$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+$image = isset($_POST['image']) ? htmlspecialchars($_POST['image']) : '';
+$description = isset($_POST['description']) ? htmlspecialchars($_POST['description']) : '';
+$size = isset($_POST['size']) ? htmlspecialchars($_POST['size']) : '';
+$quantity = isset($_POST['quantity']) ? (int)$_POST['quantity'] : 1;
+$price = isset($_POST['price']) ? (float)$_POST['price'] : 0;
+
+// Calculate total price for the item
+$totalPrice = $price * $quantity;
+
+// Create a cart item
+$cartItem = [
+    'name' => $name,
+    'image' => $image,
+    'description' => $description,
+    'size' => $size,
+    'quantity' => $quantity,
+    'price' => $price,
+    'totalPrice' => $totalPrice,
+];
+
+// Add the item to the session cart
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];
+}
+$_SESSION['cart'][] = $cartItem;
+
+// Redirect to the cart page
+header('Location: view_cart.php');
+exit;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,6 +70,7 @@
                         $quantity = $_POST['quantities'][$index];
                         $item_total = $price * $quantity;
                         $total_price += $item_total;
+                        $item['totalPrice'] = $item['price'] * $item['quantity'];
                     ?>
                         <tr>
                             <td><?php echo htmlspecialchars($item_name); ?></td>

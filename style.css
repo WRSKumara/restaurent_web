@@ -1,130 +1,339 @@
+/* Global Styles */
+:root {
+    --primary-color: #FEA116;
+    --dark-color: #0F172B;
+    --light-color: #F1F8FF;
+    --text-color: #666666;
+    --white-color: #FFFFFF;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; /* Light gray background color */
-}
-header {
-    background-color: #ff6600;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-/* filepath: c:\xampp\htdocs\restaurent_web\style.css */
-.navbar-nav .nav-item .nav-link {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--white-color);
 }
 
-.navbar-nav .nav-item .nav-link:hover {
-    background-color: #f8f9fa;
-    color: #343a40;
-    border-radius: 5px;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: var(--dark-color);
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar-toggler {
-    border: none;
-}
-
-.navbar-toggler:focus {
-    outline: none;
-}
-
-.btn-outline-light {
-    border-color: #f8f9fa;
-    color: #f8f9fa;
-}
-
-.btn-outline-light:hover {
-    background-color: #f8f9fa;
-    color: #343a40;
-}
-
-.display-4 {
-    font-size: 2rem;
-}
-
-/* filepath: c:\xampp\htdocs\restaurent_web\style.css */
-.text-center {
-    text-align: center;
-}
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-.rounded {
-    border-radius: 0.25rem;
-}
-
-.container {
-    margin-top: 20px;
-}
-
-.mt-5 {
-    margin-top: 3rem !important;
-}
-
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-/* filepath: c:\xampp\htdocs\restaurent_web\style.css */
-.bg-custom {
-    background: linear-gradient(45deg, #ff6f61, #de1b1b);
-    color: white;
-}
-
-.card-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 1rem;
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
-    background-color: #add8e6; /* Light blue background color */
-    border-color: #add8e6; /* Light blue border color */
-    color: #000000; /* Black text color */
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 25px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #87ceeb; /* Slightly darker light blue background for hover */
-    border-color: #87ceeb; /* Slightly darker light blue border for hover */
-    color: #000000; /* Black text color on hover */
+    background-color: #E59014;
+    border-color: #E59014;
 }
 
-footer {
-    background-color: #343a40;
-    color: white;
+.section-title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Header Styles */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     padding: 20px 0;
+    transition: all 0.3s ease;
 }
 
-footer a {
+.navbar {
+    padding: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--white-color);
+    font-weight: 500;
+    padding: 15px 15px;
+    font-size: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1529589789467-4a12ccb8e5ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding: 2rem;
     color: white;
-    margin: 0 10px;
-    font-size: 1.2rem;
+    max-width: 600px;
 }
 
-footer a:hover {
-    color: #ff6f61;
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.btn-book {
+    background-color: #FF9F1C;
+    color: white;
+    font-weight: 600;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-book:hover {
+    background-color: #e88e0c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bbq-image {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.bbq-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 50%;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    .bbq-image img {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        padding: 3rem 0;
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .col-reverse {
+        flex-direction: column-reverse;
+    }
+    .bbq-image {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Header styles to match the image */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.header .navbar-brand {
+    color: #FFA500;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header .navbar-brand img {
+    height: 45px;
+}
+
+.header .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.header .nav-link:hover,
+.header .nav-link.active {
+    color: #FFA500;
+}
+
+.header .book-btn {
+    background-color: #FFA500;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.header .book-btn:hover {
+    background-color: #ff8c00;
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+    .hero-content {
+        padding: 100px 40px 100px 10%;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-content {
+        padding: 80px 30px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-image {
+        height: 400px;
+        margin-top: 20px;
+    }
+    
+    .hero-image img {
+        object-position: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content {
+        padding: 60px 20px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-image {
+        height: 350px;
+    }
+}
+
+/* Featured Cards */
+.featured-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.featured-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.btn-order {
+    border-radius: 3px;
+}
+
+/* Location Section */
+.map-container {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .hero-content {
+        padding: 30px;
+    }
+    
+    .hero-content h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: auto;
+    }
+    
+    .hero-content {
+        padding: 100px 15px 50px;
+        text-align: center;
+    }
+    
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

@@ -4,150 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Flavors Restaurant</title>
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #ff6b6b;
-            --secondary-color: #4ecdc4;
-            --dark-color: #2f3542;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: var(--dark-color);
-        }
-
-        /* Carousel Styling */
-        .carousel-item img {
-            object-fit: cover;
-            filter: brightness(0.7);
-        }
-
-        .carousel-caption {
-            background: rgba(0,0,0,0.5);
-            border-radius: 10px;
-            padding: 20px;
-        }
-
-        /* Featured Dishes Section */
-        .featured-dishes {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 40px 20px;
-        }
-
-        .featured-card {
-            transition: all 0.3s ease;
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .featured-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-
-        .featured-card img {
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .featured-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .btn-order {
-            background-color: var(--primary-color);
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-order:hover {
-            background-color: #ff4757;
-            transform: translateY(-3px);
-        }
-
-        /* Location Section */
-        .location-section {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            padding: 40px 20px;
-        }
-
-        .section-title {
-            position: relative;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background-color: var(--primary-color);
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .carousel-item img {
-                height: 400px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <?php include 'header.php'; ?>
 
-    <!-- Enhanced Carousel -->
-    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/carro1.jpg" class="d-block w-100" alt="Delicious Dishes">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Discover Authentic Flavors</h1>
-                    <p>Experience the best of Sri Lankan cuisine</p>
+    <section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center" id="hero-row">
+            <div class="col-lg-6 col-md-12">
+                <div class="hero-content">
+                    <h1 class="hero-title">Enjoy Our<br>Delicious Meal</h1>
+                    <p class="hero-subtitle">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                    <button class="btn btn-book">BOOK A TABLE</button>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="images/carro2.jpg" class="d-block w-100" alt="Restaurant Interior">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Cozy Dining Experience</h1>
-                    <p>Enjoy our warm and welcoming atmosphere</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/carro3.jpg" class="d-block w-100" alt="Fresh Ingredients">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Fresh & Locally Sourced</h1>
-                    <p>We use the finest local ingredients</p>
+            <div class="col-lg-6 col-md-12">
+                <div class="bbq-image">
+                    <img src="path/to/grill-image.jpg" alt="Delicious BBQ Spread">
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
+</section>
 
     <!-- Featured Dishes Section -->
     <section class="container mt-5">
@@ -159,7 +46,7 @@
                 $featuredDishes = [
                     [
                         'name' => 'Rice & Curry',
-                        'image' => 'images/hcart1.jpg',
+                        'image' => 'images/cart1.jpg',
                         'description' => 'A delightful combination of rice and curry, perfect for any meal.',
                         'link' => 'menu.php?category=rice-curry'
                     ],
@@ -196,7 +83,7 @@
     </section>
 
     <!-- Location Section -->
-    <section class="container mt-5">
+    <section class="container mt-5 mb-5">
         <div class="location-section">
             <div class="row align-items-center">
                 <div class="col-md-6">
@@ -226,5 +113,8 @@
     <?php include 'footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

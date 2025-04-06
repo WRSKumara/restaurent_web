@@ -66,6 +66,19 @@
             height: 4px;
             background-color: #ff6b6b;
         }
+        .size-prices {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .size-prices .size-price {
+            flex: 1;
+            margin: 0 5px;
+            padding: 5px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -80,10 +93,14 @@
             <div class="row">
                 <?php 
                 $friedRices = [
-                    ['name' => 'Chicken Fried Rice', 'image' => 'cart1.jpg', 'description' => 'Delicious chicken fried rice with a blend of spices'],
-                    ['name' => 'Egg Fried Rice', 'image' => 'cart2.jpg', 'description' => 'Tasty egg fried rice with fresh vegetables'],
-                    ['name' => 'Seafood Fried Rice', 'image' => 'cart3.jpg', 'description' => 'A delightful mix of seafood and fried rice'],
-                    ['name' => 'Mix Fried Rice', 'image' => 'cart4.jpg', 'description' => 'A perfect combination of flavors in every bite']
+                    ['name' => 'Chicken Fried Rice', 'image' => 'cart1.jpg', 'description' => 'Delicious chicken fried rice with a blend of spices', 
+                     'prices' => ['Small' => 9.99, 'Medium' => 12.99, 'Large' => 15.99]],
+                    ['name' => 'Egg Fried Rice', 'image' => 'cart2.jpg', 'description' => 'Tasty egg fried rice with fresh vegetables', 
+                     'prices' => ['Small' => 8.99, 'Medium' => 10.99, 'Large' => 13.99]],
+                    ['name' => 'Seafood Fried Rice', 'image' => 'cart3.jpg', 'description' => 'A delightful mix of seafood and fried rice', 
+                     'prices' => ['Small' => 11.99, 'Medium' => 15.99, 'Large' => 18.99]],
+                    ['name' => 'Mix Fried Rice', 'image' => 'cart4.jpg', 'description' => 'A perfect combination of flavors in every bite', 
+                     'prices' => ['Small' => 10.99, 'Medium' => 14.99, 'Large' => 17.99]]
                 ];
 
                 foreach ($friedRices as $rice): ?>
@@ -93,9 +110,16 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $rice['name'] ?></h5>
                             <p class="card-text text-muted"><?= $rice['description'] ?></p>
-                            <a href="view_item.php?item=<?= urlencode($rice['name']) ?>" class="btn btn-order btn-primary w-100">
+                            <a href="view_item.php?name=<?= urlencode($rice['name']) ?>&image=<?= urlencode($rice['image']) ?>&description=<?= urlencode($rice['description']) ?>&prices=<?= urlencode(json_encode($rice['prices'])) ?>" class="btn btn-order btn-primary w-100">
                                 <i class="fas fa-shopping-cart me-2"></i>Order Now
                             </a>
+                            <div class="size-prices">
+                                <?php foreach ($rice['prices'] as $size => $price): ?>
+                                    <div class="size-price">
+                                        <?= $size ?>: $<?= number_format($price, 2) ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -109,10 +133,14 @@
             <div class="row">
                 <?php 
                 $biryanis = [
-                    ['name' => 'Chicken Biryani', 'image' => 'cart5.jpg', 'description' => 'Aromatic chicken biryani with rich spices'],
-                    ['name' => 'Beef Biryani', 'image' => 'cart6.jpg', 'description' => 'Flavorful beef biryani cooked to perfection'],
-                    ['name' => 'Prawn Biryani', 'image' => 'cart7.jpg', 'description' => 'Delicious prawn biryani with a hint of saffron'],
-                    ['name' => 'Vegetable Biryani', 'image' => 'cart8.jpg', 'description' => 'Healthy and flavorful vegetable biryani']
+                    ['name' => 'Chicken Biryani', 'image' => 'cart5.jpg', 'description' => 'Aromatic chicken biryani with rich spices', 
+                     'prices' => ['Small' => 11.99, 'Medium' => 14.99, 'Large' => 17.99]],
+                    ['name' => 'Beef Biryani', 'image' => 'cart6.jpg', 'description' => 'Flavorful beef biryani cooked to perfection', 
+                     'prices' => ['Small' => 12.99, 'Medium' => 16.99, 'Large' => 19.99]],
+                    ['name' => 'Prawn Biryani', 'image' => 'cart7.jpg', 'description' => 'Delicious prawn biryani with a hint of saffron', 
+                     'prices' => ['Small' => 13.99, 'Medium' => 17.99, 'Large' => 20.99]],
+                    ['name' => 'Vegetable Biryani', 'image' => 'cart8.jpg', 'description' => 'Healthy and flavorful vegetable biryani', 
+                     'prices' => ['Small' => 10.99, 'Medium' => 13.99, 'Large' => 16.99]]
                 ];
 
                 foreach ($biryanis as $biryani): ?>
@@ -122,9 +150,16 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $biryani['name'] ?></h5>
                             <p class="card-text text-muted"><?= $biryani['description'] ?></p>
-                            <a href="view_item.php?item=<?= urlencode($biryani['name']) ?>" class="btn btn-order btn-primary w-100">
+                            <a href="view_item.php?name=<?= urlencode($biryani['name']) ?>&image=<?= urlencode($biryani['image']) ?>&description=<?= urlencode($biryani['description']) ?>&prices=<?= urlencode(json_encode($biryani['prices'])) ?>" class="btn btn-order btn-primary w-100">
                                 <i class="fas fa-shopping-cart me-2"></i>Order Now
                             </a>
+                            <div class="size-prices">
+                                <?php foreach ($biryani['prices'] as $size => $price): ?>
+                                    <div class="size-price">
+                                        <?= $size ?>: $<?= number_format($price, 2) ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -138,10 +173,14 @@
             <div class="row">
                 <?php 
                 $riceAndCurries = [
-                    ['name' => 'Vegetable Rice & Curry', 'image' => 'cart1.jpg', 'description' => 'A healthy and flavorful vegetable curry served with rice'],
-                    ['name' => 'Chicken Rice & Curry', 'image' => 'cart2.jpg', 'description' => 'Delicious chicken curry served with steamed rice'],
-                    ['name' => 'Egg Rice & Curry', 'image' => 'cart3.jpg', 'description' => 'A simple yet tasty egg curry served with rice'],
-                    ['name' => 'Pork Rice & Curry', 'image' => 'cart4.jpg', 'description' => 'Rich and flavorful pork curry served with rice']
+                    ['name' => 'Vegetable Rice & Curry', 'image' => 'cart1.jpg', 'description' => 'A healthy and flavorful vegetable curry served with rice', 
+                     'prices' => ['Small' => 9.99, 'Medium' => 11.99, 'Large' => 14.99]],
+                    ['name' => 'Chicken Rice & Curry', 'image' => 'cart2.jpg', 'description' => 'Delicious chicken curry served with steamed rice', 
+                     'prices' => ['Small' => 10.99, 'Medium' => 13.99, 'Large' => 16.99]],
+                    ['name' => 'Egg Rice & Curry', 'image' => 'cart3.jpg', 'description' => 'A simple yet tasty egg curry served with rice', 
+                     'prices' => ['Small' => 8.99, 'Medium' => 10.99, 'Large' => 13.99]],
+                    ['name' => 'Pork Rice & Curry', 'image' => 'cart4.jpg', 'description' => 'Rich and flavorful pork curry served with rice', 
+                     'prices' => ['Small' => 11.99, 'Medium' => 14.99, 'Large' => 17.99]]
                 ];
 
                 foreach ($riceAndCurries as $dish): ?>
@@ -151,9 +190,16 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $dish['name'] ?></h5>
                             <p class="card-text text-muted"><?= $dish['description'] ?></p>
-                            <a href="view_item.php?item=<?= urlencode($dish['name']) ?>" class="btn btn-order btn-primary w-100">
+                            <a href="view_item.php?name=<?= urlencode($dish['name']) ?>&image=<?= urlencode($dish['image']) ?>&description=<?= urlencode($dish['description']) ?>&prices=<?= urlencode(json_encode($dish['prices'])) ?>" class="btn btn-order btn-primary w-100">
                                 <i class="fas fa-shopping-cart me-2"></i>Order Now
                             </a>
+                            <div class="size-prices">
+                                <?php foreach ($dish['prices'] as $size => $price): ?>
+                                    <div class="size-price">
+                                        <?= $size ?>: $<?= number_format($price, 2) ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -167,10 +213,14 @@
             <div class="row">
                 <?php 
                 $kottus = [
-                    ['name' => 'Chicken Kottu', 'image' => 'cart5.jpg', 'description' => 'A popular Sri Lankan dish made with shredded roti and chicken'],
-                    ['name' => 'Vegetable Kottu', 'image' => 'cart6.jpg', 'description' => 'A vegetarian version of the classic kottu dish'],
-                    ['name' => 'Egg Kottu', 'image' => 'cart7.jpg', 'description' => 'A delicious kottu dish made with eggs and spices'],
-                    ['name' => 'Cheese Kottu', 'image' => 'cart8.jpg', 'description' => 'A cheesy twist on the classic kottu dish']
+                    ['name' => 'Chicken Kottu', 'image' => 'cart5.jpg', 'description' => 'A popular Sri Lankan dish made with shredded roti and chicken', 
+                     'prices' => ['Small' => 10.99, 'Medium' => 12.99, 'Large' => 15.99]],
+                    ['name' => 'Vegetable Kottu', 'image' => 'cart6.jpg', 'description' => 'A vegetarian version of the classic kottu dish', 
+                     'prices' => ['Small' => 9.99, 'Medium' => 11.99, 'Large' => 14.99]],
+                    ['name' => 'Egg Kottu', 'image' => 'cart7.jpg', 'description' => 'A delicious kottu dish made with eggs and spices', 
+                     'prices' => ['Small' => 9.99, 'Medium' => 11.99, 'Large' => 14.99]],
+                    ['name' => 'Cheese Kottu', 'image' => 'cart8.jpg', 'description' => 'A cheesy twist on the classic kottu dish', 
+                     'prices' => ['Small' => 11.99, 'Medium' => 13.99, 'Large' => 16.99]]
                 ];
 
                 foreach ($kottus as $kottu): ?>
@@ -180,10 +230,16 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $kottu['name'] ?></h5>
                             <p class="card-text text-muted"><?= $kottu['description'] ?></p>
-                            <!-- filepath: c:\xampp\htdocs\restaurent_web\menu.php -->
-                                <a href="view_item.php?item=<?= urlencode($kottu['name']) ?>&image=<?= urlencode($kottu['image']) ?>&description=<?= urlencode($kottu['description']) ?>" class="btn btn-order btn-primary w-100">
+                            <a href="view_item.php?name=<?= urlencode($kottu['name']) ?>&image=<?= urlencode($kottu['image']) ?>&description=<?= urlencode($kottu['description']) ?>&prices=<?= urlencode(json_encode($kottu['prices'])) ?>" class="btn btn-order btn-primary w-100">
                                 <i class="fas fa-shopping-cart me-2"></i>Order Now
-                                </a>
+                            </a>
+                            <div class="size-prices">
+                                <?php foreach ($kottu['prices'] as $size => $price): ?>
+                                    <div class="size-price">
+                                        <?= $size ?>: $<?= number_format($price, 2) ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
